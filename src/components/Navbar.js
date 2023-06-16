@@ -8,9 +8,8 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import MenuItem from '@mui/material/MenuItem';
-import NavLinks from './NavLinks';
 import { Link } from 'react-router-dom'
-import { Stack } from '@mui/material'
+
 
 const links = [
   {name: 'Home', route: '/', id: 1},
@@ -32,7 +31,7 @@ const Navbar = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: '#fafafa'}}>
+    <AppBar sx={{ position: 'sticky', backgroundColor: '#fafafa'}}>
       <Container maxWidth="xl" >
         <Toolbar disableGutters>
           
@@ -45,14 +44,14 @@ const Navbar = () => {
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },
                 flexGrow: 10,
-                fontFamily: 'monospace',
+                fontFamily: 'inherit',
                 fontWeight: 700,
                 letterSpacing: '.3rem',
                 color: 'black',
                 textDecoration: 'none',
               }}>
                <Link to='/' > logo</Link>
-                </Typography>
+            </Typography>
           
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
