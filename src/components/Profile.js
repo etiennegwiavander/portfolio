@@ -5,8 +5,8 @@ import '../profile.css'
 
 const Profile = () => {
   return (
-    <Box >
-        <img src={profilePhoto} style={{ height:'350px', width: '350px'}} />
+    <Box sx={{ mt: '50px', textAlign: 'center'}}>
+        <img src={profilePhoto} style={{ height:'350px', width: '350px'}} className='profile-img'/>
         
     </Box>
   )

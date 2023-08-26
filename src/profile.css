@@ -1,4 +1,4 @@
-img {
+.profile-img {
     --color: teal; /* the border color */
     --border: 10px;   /* the border thickness*/
     --offset: 20px;   /* control the offset*/
@@ -16,14 +16,14 @@ img {
       linear-gradient(90deg,var(--_c)) var(--_o) var(--_o);
     background-size: calc(100% - var(--_o)) calc(100% - var(--_o));
     background-repeat: no-repeat;
-    filter: grayscale(.1);
+    filter: grayscale(.3);
     transition: .3s;
     cursor: pointer;
   }
-  img:hover {
+  .profile-img:hover {
     background-position: 0px 0px;
     background-size: calc(100% - var(--offset)) calc(100% - var(--offset));
-    filter: grayscale(2);
+    filter: grayscale(.1);
   }
   
   body {

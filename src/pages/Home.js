@@ -7,12 +7,11 @@ import Contact from '../components/Contact'
 
 const Home = () => {
   return (
-    <Box>
-        <Homepage/>
+    <Box margin="0px">
+        <Homepage />
         <About/>
         <Projects/>
-        <Contact/>
-        
+        <Contact/>        
     </Box>
   )
 }
