@@ -1,8 +1,9 @@
 import React from 'react'
-import { Stack, Box, Typography, Button } from '@mui/material'
+import { Stack, Box, Typography, Button, Grid } from '@mui/material'
 import Profile from './Profile'
 import '../stack.css'
-// import techStacks from '../utils/stackIcons'
+
+
 
 
 import html from '../assets/stackIcons/html5.png'
@@ -34,35 +35,44 @@ export const techStacks = [
 const Homepage = () => {
 
   return (
-    <Box  sx={{  width: '100vw', height: "100vh", mt: "-60px"}}>
-        <Stack direction='row' width="100%" sx={{mt: '180px'}}>
-            <Box sx={{ width:{ md: '50vw' }, backgroundColor: 'teal'}}>
-                <Stack sx={{  textAlign: 'center', mt:"60px", padding:'15px'}}>
-                    <Typography variant='h2' sx={{ variant:{xs: 'h4', md: 'h3'}, ml:{xxl: '150px', xl: '250px'} }}>
+    <Box  sx={{  width: '100vw', height: "100vh", mt: "-60px",backgroundColor: {
+xs: "red",
+md: "green",
+lg: "blue",
+xl: "pink"
+}, }}>
+  
+
+        <Stack container direction='row' sx={{ direction: { xs: "column", lg: "row" } , mt:'340px', mb:'70px'}} width="100%">
+
+            <Box sx={{ width:{ md: '50vw' }}}>
+                <Stack sx={{  textAlign: 'center', mt:{ xs:'100px', md:'140px', lg:'120px', xl:"130px", }, ml:{ md:'40px', lg:'80px'}, padding:'15px', width:{xl:'700px'}}}>
+                    <Typography variant='h2' sx={{ variant: 'h3', ml:{ xl:'250px', lg:'200px'} }}>
                         Front-End React Developer 👋🏽
                     </Typography>
-                    <Typography  mt='20px' sx={{ mt: '50px', textAlign: 'center' }}>
+                    <Typography  mt='20px' sx={{ mt: '50px', textAlign:'justify', pl:{xl:'30px'}, ml:{xl:'150px', lg:'100px'}, width:{xl:'680px', lg:'600px'}, fontSize:'23px' }}>
                     
-                        Hi, I'm Etiene Gwiavender Lakiebukeh. A passionate Front-end React Developer based in Bamenda, Cameroon. 📍
+                        Hi, I'm Etienne Gwiavender Lakiebukeh. A passionate Front-end React Developer based in Bamenda, Cameroon. <span fontSize='2em' >🦍</span> 
 
                     </Typography>
                 </Stack>    
             </Box>
-            <Box sx={{ width:{ md: '50vw', padding: "15px" }, backgroundColor: 'pink'}}>
+
+            <Box sx={{ width:{ md: '50vw', padding: "15px" }}}>
                 <Profile/>
             </Box>
         </Stack>
-        <Stack direction='row' mx={10} sx={{ flexWrap: 'wrap', gap: '20px', mt: "30px"}}>
+        <Stack direction='row' mx={10}  sx={{ flexWrap: 'wrap', gap: '20px', mt: "30px"}}>
             {techStacks.map( (techStack) =>(
                
-                <Box className='categoryWrapper'  >
+                <Box className='categoryWrapper' sx={{ borderRadius:'50%'}} >
                     <Stack key={techStack.name} >
                         <img 
                             src={techStack.icon} 
                             alt={techStack.name}
                             style={{
-                                width: '40px',
-                                height: '40px'
+                                width: '50px',
+                                height: '50px'
                             }}
                         />
                     </Stack>
